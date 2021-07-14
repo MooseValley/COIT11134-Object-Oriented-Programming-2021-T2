@@ -26,7 +26,11 @@ This repo will include:
 * I will answer quick questions via email, but long / involved questions should be asked on the forums or in class.
 
 
-### Other useful links:
+### Useful links:
+
+* Course web page: https://moodle.cqu.edu.au/course/view.php?id=21818
+
+* This Github Repo: https://github.com/MooseValley/COIT11134-Object-Oriented-Programming-2021-T2
 
 * Mike O'Malley's Java Videos (many dozes of useful videos for Java programmers of all levels !):
 <br>http://tinyurl.com/MikesJavaVideos
