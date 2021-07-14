@@ -1,4 +1,4 @@
-# COIT11134 Object Oriented Programming (2021-T2)
+# Mike O'Malley's COIT11134 Object Oriented Programming (2021-T2)
 
 All of my class work will be uploaded here.
 
