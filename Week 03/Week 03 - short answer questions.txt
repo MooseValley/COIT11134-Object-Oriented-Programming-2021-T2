@@ -16,7 +16,7 @@ Why have them
 public class Vehicle extends MyClass
 {
    public double calculateSalary ()
-   {  
+   {
       :::
    }
 }
@@ -44,15 +44,19 @@ How are they the same ?
 How are they different ?
 
 
-	Abstract Class				Concrete Class
-Diff	cannot be instatiated			can be instantiated
-Diff	can have abstract methods		cannot have abstract methods 
-Diff	Declared public abstract class		Declared public class
-Diff	Can contain implemented methods		Must contain all implemented methods
-Same	Can have a super class			Can have a super class
-Same	Can have a child class			Can have a child class
-	Can have a super Concrete class ??	Can have a super Concrete class ??
-	Can have a child Concrete class ??	Can have a child Concrete class ??
-	Can have a super abstract class ??	Can have a super abstract class ??
-	Can have a child abstract class ??	Can have a child abstract class ??
+	Abstract Class								Concrete Class
+Diff	cannot be instatiated				can be instantiated
+Diff	can have abstract methods			cannot have abstract methods
+Diff	Declared public abstract class	Declared public class
+Diff	Can contain implemented methods	Must contain all implemented methods
+Same	Can have a super class				Can have a super class
+Same	Can have a child class				Can have a child class
+??	Can have a super Concrete class ??	Can have a super Concrete class ??
+??	Can have a child Concrete class ??	Can have a child Concrete class ??
+??	Can have a super abstract class ??	Can have a super abstract class ??
+??	Can have a child abstract class ??	Can have a child abstract class ??
+??	Template ?									Template ?
+??	etc ???
+??	etc ???
 
+.
