@@ -29,4 +29,145 @@ LAST WEEK: Week 03
 THIS WEEK: Week 04
 * Week 04 - GUI and Event Handling    <--- YOU ARE HERE !
 
+
+Basic GUI Development
+* From first Principles
+
+
+MVC - Model View Controller
+
+
+Panel p = new Panel();
+p.add (myButton);
+p.add (myLabel);
+
+p.setVisible(false);
+
+p.setVisible(true);
+
+
+Label
+	setText
+	getText
+
+TextArea
+	setText
+	getText
+	//append
+	
+TextField
+	setText
+	getText
+
+CheckBox
+	isSelected
+	setSelected
+
+
+
+
+********************************************
+Assignment 1
+********************************************
+
+Read spec ....
+
+Good news:
+* No edit Farm, etc
+* No delete Farm, etc
+* No save / load to/from file
+* No sorting, searching
+* these will probably be part of Assignment 2
+
+
+In Week 2 Vehicles, Cars, Trucks project we had:
+
+ArrayList<Vehicle> vehiclesArrayList = new ArrayList<Vehicle>();
+
+In Ass 1, we could have an arraylist for each type of data:
+
+ArrayList<Farm> farmsArrayList = new ArrayList<Farm>();
+etc
+
+
+
+Farm
+	Add Farm
+	Display Farms
+
+Add Farm
+Name:    [              ]
+Address: [              ]
+Phone:   [              ]
+
+[Add]  [Clear]
+
+
+
+*** Add Farm
+
+if (nameTextField.getText().trim().length() == 0)
+   display error
+else if (addressTextField.getText().trim().length() == 0)
+   display error
+else if (.....)
+   display error
+else
+{
+    // All data is valid
+    Farm f = new Farm
+        (nameTextField.getText().trim(),
+         addressTextField.getText().trim(),
+	    ::::::::);
+
+	farmArrayList.add (f);
+}
+
+
+*** Display Farm
+
+String outputStr = "";
+
+for (Farm f : farmArrayList)
+{
+   outputStr += f.toString() + "\n";    
+}
+
+textArea.setText (outputStr);
+
+
+
+
+
+********************************************
+*** NEXT WEEK
+********************************************
+
+Vehciles, Cars, Trucks ...
+
+Create a nice GUI
+
+create a Vehcile, Car, Truck
+
+display all Vehicles
+display all Cars
+display all Trucks
+
+Display the Average Passengers per Car
+
+Select a Vehicle
+	ComboBox
+	Display Details
+
+
+
+********************************************
+Homework to do before next week:
+********************************************
+* Explore GUI dev we have done so far
+* get as much practice with GUI dev as possible now so it is one less thing to worry about when you are doing Ass 1
+* explore ComboBox and other controls that might be useful for Ass 1
+* read / think about Ass 1 spec.	
+
+
 EOF.
