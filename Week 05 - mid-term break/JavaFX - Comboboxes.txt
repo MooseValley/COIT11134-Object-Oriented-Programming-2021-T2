@@ -1,0 +1,48 @@
+
+	private Button myButton;
+	private ComboBox<String> workerComboBox;
+
+
+	@Override
+	public void start (....)
+	{
+		button = new Button ("Select Worker");
+
+		button.setOnAction (e -> printSelectedWorker() );
+
+
+
+		workerComboBox = new ComboBox<>();
+		workerComboBox.getItems().addAll("Moose", "Frankie", "Bella");
+
+		// Makes the label box display this - saves having a label.
+		workerComboBox.setPromptText ("Select a Worker");
+
+		workerComboBox.setOnAction (e -> printSelectedWorker() );
+
+		workerComboBox.setEditable (true);
+	}
+
+	private void printSelectedWorker()
+	{
+		System.out.println (workerComboBox.getValue() );
+	}
+
+
+
+   @FXML
+   private ComboBox<Student> studentComboBox;
+
+    @Override
+    public void initialize(URL url, ResourceBundle rb)
+    {
+
+		StudentAddFXMLController.studentsArrayList.add (new Student ("Moose",   "02 121 212",   "Moose@mail.net") );
+		StudentAddFXMLController.studentsArrayList.add (new Student ("Frankie", "0441 778 179", "Frankie@hotmail.com") );
+		StudentAddFXMLController.studentsArrayList.add (new Student ("Bella",   "0469 991 991", "Bella@gmail.com") );
+
+		for (Student s: StudentAddFXMLController.studentsArrayList)
+		{
+			studentComboBox.getItems().addAll (s);
+		}
+	}
