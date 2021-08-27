@@ -29,4 +29,80 @@ LAST WEEK: Week 05
 THIS WEEK: Week 06
 * Week 06 - Exception Handling, and File IO    <--- YOU ARE HERE !
 
+
+Assingment 1 DUE this week.
+Everyone has extension until Sunday, 29-Aug @ 11:59 PM (approx).
+See email from Course Coordinator
+
+Comments:
+* Comment header at the top of each file: Source file, Description, Author
+* Comments in code - to describe what the next block of code is doing.
+
+
+Make sure you are using the RIGHT software for this course:
+* Java 8 SDK
+* NetBeans 8.2
+* SceneBuilder for Java 8
+==> as per the course web page.
+
+Make sure you submit ALL the right files:
+* Your complete NetBeans project, etc
+==> and NOT just the src folder files.
+
+
+*************************************
+Exceptions
+*************************************
+
+Unchecked 
+* no need for try catch, etc
+* if programs crashes, it crashes
+* Java will still compile and run your code
+
+Checked 
+* You need for try catch, etc - file i/o
+* Java will NOT compile your code
+
+
+***************************************
+File I/O
+***************************************
+
+Read a file
+BufferedRead
+InputStream
+Scanner
+
+Write a File
+BufferedWriter
+OutputStream
+Formatted Writer
+
+
+Plain Text Files
+	open file 
+	for each student
+		write name
+		write email
+		::::
+	close file
+
+	
+
+
+Binary Files
+
+ArrayList of Student
+	open file of type <ArrayList of Student>
+	write data
+	close file
+
+
+
+
+String[] data = "Mike,123,455".split(",");
+data[0] = "Mike"
+data[1] = "123"
+data[2] = "455"
+
 EOF.

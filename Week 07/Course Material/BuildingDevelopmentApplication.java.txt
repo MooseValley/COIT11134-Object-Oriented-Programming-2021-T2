@@ -1,0 +1,94 @@
+/*
+ * To change this license header, choose License Headers in Project Properties.
+ * To change this template file, choose Tools | Templates
+ * and open the template in the editor.
+ */
+package w2x;
+
+import java.time.LocalDate;
+
+/**
+ *
+ * @author uvenu
+ */
+public class BuildingDevelopmentApplication {
+    
+    // create instance fields to store the values of plot width and length
+    // create instance fields to store the values of building width and length
+   // create instance fields to store the date of application	
+    double plotLength;
+    double plotWidth;
+    double buildingLength;
+    double buildingWidth;
+    LocalDate appliedDate;
+    boolean approved = false;
+
+// create parameterized constructor here for BuildingDevelopmentApplication
+    public BuildingDevelopmentApplication(double plotLength, double plotWidth, double buildingLength, double buildingWidth, LocalDate appliedDate) {
+        this.plotLength = plotLength;
+        this.plotWidth = plotWidth;
+        this.buildingLength = buildingLength;
+        this.buildingWidth = buildingWidth;
+        this.appliedDate = appliedDate;
+    }
+
+
+
+    // inner class to verify the building plan adheres to front, rear and sides clearance 
+    class Verification{
+        boolean objection ;
+        private static final double MINIMUMREQUIRED = 2;
+
+        public Verification() {
+            objection = false;
+        }
+
+        boolean check(){
+           
+            if(checkWidth() && checkLength()){
+                 //satisfied the conditions
+                objection = false;
+                return !objection;
+            }
+            //not satisfying conditions
+            return false;
+
+        }
+        boolean checkWidth(){
+            if ((plotWidth - buildingWidth) >= MINIMUMREQUIRED)
+                return true;
+            return false;
+        }
+        boolean checkLength(){
+            if ((plotLength - buildingLength) >= MINIMUMREQUIRED)
+                return true;
+            return false;
+
+        }
+
+    }
+    //displaying the status of approval of the application
+    public void displayApproval(){
+        Verification test = new Verification();
+        approved = test.check();
+        if(approved)
+            System.out.println("Building plan Approved");
+        else
+            System.out.println("Building plan Rejected");
+    }
+    //tester
+    public static void main(String [] args){
+        BuildingDevelopmentApplication application1 = new BuildingDevelopmentApplication(40,15,25,12, LocalDate.now());
+        System.out.println("Application 1's status :");
+        application1.displayApproval();
+
+        BuildingDevelopmentApplication application2 = new BuildingDevelopmentApplication(40,15,23,13.1, LocalDate.now());
+        System.out.println("Application 2's status :");
+
+        application2.displayApproval();
+    }
+
+}
+
+
+

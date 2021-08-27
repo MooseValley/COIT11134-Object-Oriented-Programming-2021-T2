@@ -1,0 +1,9 @@
+Changing which Button, Component has Focus when Scene loads
+
+If you put:        
+        exitButton.requestFocus();
+in the initialize() method for the scene, then this is ignored / overridden by SceneBuilder.
+
+The Button / GUI component that has focus by default when a Scene is displayed is the order in which they were created in Scene Builder.
+
+To change this, simply drag the Button or GUI Component to the top of the Hierarchy -> Anchor Pane in Scene Builder to make it have focus.
