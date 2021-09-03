@@ -29,4 +29,108 @@ LAST WEEK: Week 06
 THIS WEEK: Week 07
 * Week 07 - Interfaces and Inner Classes    <--- YOU ARE HERE !
 
+
+
+
+***********************************
+Types of Classes
+***********************************
+
+** Super / Sub - Inherritance
+
+** Abstract - template for ancestors ...
+
+** Concrete / Instance Classes
+
+** Inner classes
+	class TestData
+	{
+	    public int count;
+	    public String result;
+	}
+	ArrayList <TestData> testDataArrayList = new ArrayList<>();
+	
+	testDataArrayList.get(0).count =  66;
+
+** Interface Classes	
+* restricting what you can store in a data structure
+* e.g. must implement Comparable
+* template
+
+I want to create a data structure - LinkedList, ArrayList, Stack, Queue,
+of Employees (manager, ceo, admin, etc are all fine)
+or any object that implements particular Interface(s)
+
+
+Employee, Person, Product, 
+one way:	implement Comparable
+	compareTo
+	equals
+
+Product p1 = ...
+Product p2 = ...
+
+if (p1.compareTo(p2) == 0)
+
+
+
+Inherritance and Interface
+extends		implements
+max of 1	implment 0, 1, 2, 3, ...
+Not template	Templating - force classes to implement methods
+
+
+Interface		Class
+Cannot Implement	Can Implement ...
+
+
+
+** Wrapper Classes / Auto Boxing / Auto Unboxing
+
+int k = 5;
+Integer m = 5;
+
+double d1 = 4.5;
+Double d2 = 4.5;
+
+d2 = d1;	// OK - auto-boxing, Auto Unboxing
+d1 = d2;	// OK
+
+d1 = (double) d2;  // Typecast not needed
+
+Reference types
+Many of Java's built in Data Structures require Reference Types
+- ArrayList, LinkedList, Stacks, Queues, Trees, ....
+
+
+ArrayList<int>		// ERROR
+ArrayList<Integer>	// OK
+
+LinkedList<int>		// ERROR
+LinkedList<Integer>	// OK
+
+int k = Integer.parseInt ("123");
+
+
+
+int k, m;
+
+k.compareTo(m) // ERROR
+
+Integer k2, m2;
+
+k2.compareTo(m2) // OK
+
+
+
+** Pseudo Code:
+
+ArrayList<Employee> arr
+
+ArrayList<Employee implements Payable> arr
+
+
+
+
+
 EOF.
