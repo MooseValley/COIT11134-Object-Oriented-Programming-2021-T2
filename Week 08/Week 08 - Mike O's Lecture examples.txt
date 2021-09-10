@@ -29,4 +29,208 @@ LAST WEEK: Week 07
 THIS WEEK: Week 08
 * Week 08 - Generic methods and classes    <--- YOU ARE HERE !
 
+
+Assignment 1
+* Marks returned by Sunday night (2 weeks after extended due date)
+* Sun, 12-Sep
+
+
+
+Overloading
+* 2 or more methods with the same, but have different parameters.
+* which method is called depends on parameters - order, type, number, ...
+* can also depend on context
+
+
+Generic Methods
+* if yuou find your self writing multiple methods that are basically the same apart from data types passed to the methods - STOP !!!
+* Think: Generic Methods !!
+* Useful for:
+    Sort an array of String
+        or Integer
+        or Students
+        or Products
+    Search
+    Binary Search
+    File I/O
+    
+    Array of ???
+    Sort,
+    Adding 
+    File I/O
+
+
+
+
+***********************************
+Tutorial:
+***********************************
+
+Added new question – Mike O
+1. Write a method, namely printArray, to print the contents of an array of String.  Write a tester class that uses the printArray method to print the contents of an array of String
+
+
+Optional Exercises:
+
+Added new question – Mike O
+
+1. expand the question to handle 2 data types:
+
+    // test whether two generic types are equal
+    public static < T,U > boolean isEqualTo( T first, U second )
+    {
+        // complete missing codes
+        // TODO: Check for nulls
+        // TODO: Check data types
+        // TODO: Compare values
+    }
+    
+
+
+
+*******************************************
+Lamda
+*******************************************
+
+
+class ButtonListener implements ActionListener
+{
+  public actionPerformed (ActionEvent e)
+  {
+      ::::
+      if (e.getSource() == exitButton)
+      {
+         exit();
+      }
+      else ..
+  }
+}
+
+
+Button myButton ....
+
+ButtonListener myListener = new ButtonListener ();
+myButton.addActionListener (myListener);
+
+
+// Lamdas:  ->
+// nameless block of code you can use so don't have to implement 
+// a complete method (or do other stuff like create listener classes).
+
+myButton.addActionListener (event -> exit() );
+
+
+****************************************************
+File I/O: Read/Write File of Strings
+****************************************************
+
+import java.io.FileReader;
+import java.util.ArrayList;
+import java.util.Formatter;
+import java.util.Scanner;
+
+public class W08FileReaderWriter 
+{
+    private static ArrayList<String> namesArrayList = new ArrayList<String>(); 
+
+    public static void readFile()
+    {
+
+        // Try with resources - you do NOT need to worry about finally, 
+        // closing the file, etc
+        try (Scanner inFile = new Scanner (new FileReader ("file.txt")); )
+        {
+            namesArrayList.clear();
+            
+            while (inFile.hasNext() == true)
+            {
+                namesArrayList.add (inFile.next() );
+            }
+        }
+        catch (Exception err)
+        {
+            System.out.println ("ERROR: file count not be read.");
+            err.printStackTrace();
+        }
+    }
+    
+    public static void writeFile ()
+    {
+        // Try with resources - Java automatically closes the file for us !!
+        try (Formatter outFile = new Formatter ("file.txt") )
+        {
+            for (String s: namesArrayList)
+            {
+                outFile.format (s + "\n");
+            }
+        }
+        catch (Exception err)
+        {
+            System.out.println ("ERROR: file count not be read.");
+            err.printStackTrace();
+        }
+    }
+ 
+    public static void displayArrayList ()
+    {
+        for (String s: namesArrayList)
+        {
+            System.out.println (s);
+        }
+    }
+    
+    public static void main(String[] args) 
+    {
+        // TODO code application logic here
+        namesArrayList.add ("Mike");
+        namesArrayList.add ("Frankie");
+        namesArrayList.add ("Bella");
+        
+        writeFile();
+        
+        namesArrayList.clear(); // To prove the readFile works below !
+        
+        readFile();
+        displayArrayList ();
+    }
+    
+}
+
+
+See my W08FileReaderWriter Netbeans project.
+
+
+*** ArrayList and File of Student:
+
+If the file contained Student details: name, address, phone, email
+then ourt arraylist would be: ArrayList<String> ....
+
+Recommend: one field per line, so you don't have to worry about
+commas, tabs, spaces, etc.
+
+We would read in name:
+String nameStr = inFile.next();
+String addressStr = inFile.next();
+::: etc
+
+and then use this to create a Student or whatever object
+and add the student object to the arraylist.
+
+
+If you were writing out the data for Students,
+as said above, recommend you write one field per line.
+
+For an arraylist of Student, your loop would change to:
+for (Students: namesArrayList)
+
+And you could do this:
+outFile.format (s.getName()    + "\n" +
+	s.getAddress() + "\n" +
+	:::);
+
+Or better yet, add a toStringWithLineBreak() to your Student class
+that returns the data one field per line, and call this:
+
+outFile.format (s.toStringWithLineBreak() );
+     
 EOF.
