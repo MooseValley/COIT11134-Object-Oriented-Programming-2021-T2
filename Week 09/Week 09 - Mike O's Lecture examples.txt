@@ -28,5 +28,45 @@ LAST WEEK: Week 08
 
 THIS WEEK: Week 09
 * Week 09 - Generic classes    <--- YOU ARE HERE !
+* Assignment 2 DUE at the end of Week 11: Friday, 1 October 2021, 11:59 PM
+
+
+
+**************************************************
+Tutorial and Lab Exercises – Week 9
+EXTRAS
+**************************************************
+
+// Q1.B. How can you limit things so that the class must be a numeric class ?
+
+So you cannot create objects like this:
+
+Tour<String>  tour3 = new Tour<String>  ("Sydney", "Hello");
+Tour<Student> tour4 = new Tour<Student> ("Mike",   "O");
+
+
+
+
+
+
+// Q5: Students to create a single array list of All Studies and Tourse.
+//     and find the Total of everything using that arraylist.
+
+
+// Q6: Students to modify things so that the AllExpense creates the ArrayList internally,
+//     and add an "Add" method so add data to this ArrayList.
+// i.e. change this code:
+        ArrayList<Study> allStudy = new ArrayList<Study>();
+        allStudy.add(study1);
+        allStudy.add(study2);
+
+        AllExpense<Study> se = new AllExpense<Study>(allStudy);
+        System.out.println( "Total of Study Expenses : $"+se.findTotal());
+
+// so that it works like this (much simpler):
+        AllExpense<Study> allExpenses = new AllExpense<Study>();
+        allExpenses.add(study1);
+        allExpenses.add(study2);
+        System.out.println( "Total of Study Expenses : $" + allExpenses.findTotal());
 
 EOF.

@@ -28,5 +28,7 @@ LAST WEEK: Week 10
 
 THIS WEEK: Week 11
 * Week 11 - Stacks, Queues and Trees    <--- YOU ARE HERE !
+* Assignment 2 DUE at the end of Week 11 - this week: Friday, 1 October 2021, 11:59 PM
+
 
 EOF.

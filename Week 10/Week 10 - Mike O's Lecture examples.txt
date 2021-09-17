@@ -28,5 +28,7 @@ LAST WEEK: Week 09
 
 THIS WEEK: Week 10
 * Week 10 - List and Algorithm    <--- YOU ARE HERE !
+* Assignment 2 DUE at the end of Week 11 - next week: Friday, 1 October 2021, 11:59 PM
+
 
 EOF.

@@ -1,0 +1,29 @@
+// TODO #1: Students to create a single array list of All Studies and Tourse.
+//          and find the Total of everything using that arraylist.
+
+        ArrayList<Needable> allNeedable = new ArrayList<>();
+        allNeedable.add(tour1);
+        allNeedable.add(tour2);
+        allNeedable.add(study1);
+        allNeedable.add(study2);
+
+          AllExpense<Needable> allExpenseNeedable = new AllExpense<Needable>(allNeedable);
+        System.out.println( "Total of Needable Expenses : $" + allExpenseNeedable.findTotal());
+
+
+// TODO #2: Students to modify things so that the AllExpense creates the ArrayList internally,
+//          and add an "Add" method so add data to this ArrayList.
+
+// i.e. change this code:
+        ArrayList<Study> allStudy = new ArrayList<Study>();
+        allStudy.add(study1);
+        allStudy.add(study2);
+
+        AllExpense<Study> se = new AllExpense<Study>(allStudy);
+        System.out.println( "Total of Study Expenses : $"+se.findTotal());
+
+// so that it works like this (much simpler):
+        AllExpense<Study> se = new AllExpense<Study>();
+        se.add(study1);
+        se.add(study2);
+        System.out.println( "Total of Study Expenses : $"+se.findTotal());
