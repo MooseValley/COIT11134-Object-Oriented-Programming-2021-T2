@@ -31,4 +31,136 @@ THIS WEEK: Week 10
 * Assignment 2 DUE at the end of Week 11 - next week: Friday, 1 October 2021, 11:59 PM
 
 
+Q1
+
+	David
+	Peter
+	John
+---	
+	Joshua
+
+See Netbeans project: W10LinkedListIteratorExample
+
+
+
+https://docs.oracle.com/javase/7/docs/api/java/util/ListIterator.html
+
+Modifier and Type	Method and Description
+void	add(E e)
+Inserts the specified element into the list (optional operation).
+boolean	hasNext()
+Returns true if this list iterator has more elements when traversing the list in the forward direction.
+boolean	hasPrevious()
+Returns true if this list iterator has more elements when traversing the list in the reverse direction.
+E	next()
+Returns the next element in the list and advances the cursor position.
+int	nextIndex()
+Returns the index of the element that would be returned by a subsequent call to next().
+E	previous()
+Returns the previous element in the list and moves the cursor position backwards.
+int	previousIndex()
+Returns the index of the element that would be returned by a subsequent call to previous().
+void	remove()
+Removes from the list the last element that was returned by next() or previous() (optional operation).
+void	set(E e)
+Replaces the last element returned by next() or previous() with the specified element (optional operation).
+
+
+
+****************************************
+Assignment 2
+****************************************
+
+1.	When the application is started, it should get/load the data from the relevant file(s) related to farms, dairies, milk supply and delivery that have been already entered earlier; and display the latest delivery details or an appropriate message when there has been no delivery so far.
+
+
+class Delivery
+{
+   //LocalDate date;
+   Strings date; //dd-mmm-yyyy
+   :::::
+   
+}
+
+ArrayList<Delivery> deliveries ....
+
+
+DatePicker []     [Refresh Stats] 
+
+
+double totalQuantity;
+int count;
+
+DatePicket.setValue (LocalDate.now() );
+
+
+DateTimeFormatter formatter = DateTimeFormatter.ofPattern("DD-MMM-yyyy");
+
+String datePickerStr = datepicker.value().format (formatter);
+
+
+for (Delivery d : deliveries)
+{
+   if (d.getDate().compareTo (datePickerStr) == 0)
+   {
+      count++;
+      totalQuantity += d.getQuantity();
+      ::::
+   }
+   
+}
+
+double avg = 0;
+if (count > 0)
+	avg = totalQuantity / count;
+	
+label.setText ("On " + datePickerStr + " there were " + count + 
+               "deliveries, with a total quantity of " +
+               String.format("%.2f", totalQuantity) + " gallons"
+               " with a average of "
+               String.format("%.2f", avg) + " gallons." );
+
+
+
+
+2.	Display the following statistical information:
+I.	minimum, maximum and average data of all the milk supplies for any selected day 
+II.	minimum, maximum and average data of all the milk deliveries for any selected day 
+
+
+// After you load the Deliveries File
+
+Delivery delivery;
+
+while (file.hasNext() == true)
+{
+    delivery = new Delivery (file.nextLine(), file.nextLine(), ...);
+    
+    arrayList.add (delivery);
+}
+latestDeliveryLabel.setText (delivery.toString () );
+
+
+// Or after the user adds a delivery
+// also update this same label
+
+Delivery delivery = new Delivery (inputTextField1.getText(),
+                                  inputTextField2.getText(), 
+                                  ...);
+arrayList.add (delivery);
+ 
+latestDeliveryLabel.setText (delivery.toString () );
+
+// Recommend: show this label on the Main Menu screen !!
+
+// If your code to update the label is on controllers for other
+// scenes, you will need to fully qualify the label name:
+// classname.label.setText ()
+// Example:
+
+MainMenuController.latestDeliveryLabel.setText (delivery.toString () );
+
+
+
+
 EOF.
