@@ -31,4 +31,19 @@ THIS WEEK: Week 11
 * Assignment 2 DUE at the end of Week 11 - this week: Friday, 1 October 2021, 11:59 PM
 
 
+* Past Exams DOWNLOAD:
+https://sportal.cqu.edu.au/
+https://handbook.cqu.edu.au/courses/index?courseCode=COIT11134
+
+* Week 12 - NEXT WEEK = REVISION
+-> Bring along any questions you need help with.
+* Prior to Week 12's classes:
+-> Work through the most recently available PAST EXAM (2019-T2)
+-> Work through any qustions you like in any other prior or sample exams.
+-> We will discuss in Week 12 classes.
+--> Hints and tips
+--> NOTE: NO SOLUTIONS GIVEN TO PAST EXAMS.  Why ? They are your last chance to check / verify your knowledge and get practice with answering Java programming (at this course's level) exam questions on paper before the REAL Exam.
+
+
+
 EOF.
